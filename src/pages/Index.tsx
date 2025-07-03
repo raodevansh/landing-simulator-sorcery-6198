@@ -41,6 +41,16 @@ const Index = () => {
             />
           </div>
         </div>
+
+        {/* New Subheading and Text Section */}
+        <div className={`mt-16 mb-12 text-center transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+          <h2 className="text-3xl font-bold text-white mb-6">
+            Good ideas are just the beginning — we help you make them great.
+          </h2>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Supercharge your concept with real-time data, sharpen it with powerful insights, and uncover market gaps you didn't even know existed. Inside our unified workspace, your rough idea transforms into a refined, investor-ready vision — smarter, stronger, and built to win.
+          </p>
+        </div>
         
         <EmailForm />
         
