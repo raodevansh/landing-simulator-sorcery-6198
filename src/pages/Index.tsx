@@ -51,6 +51,17 @@ const Index = () => {
             Supercharge your concept with real-time data, sharpen it with powerful insights, and uncover market gaps you didn't even know existed. Inside our unified workspace, your rough idea transforms into a refined, investor-ready vision — smarter, stronger, and built to win.
           </p>
         </div>
+
+        {/* New Product UI Image */}
+        <div className={`mt-16 mb-12 text-center transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="max-w-5xl mx-auto">
+            <img 
+              src="/lovable-uploads/9120c020-d037-4fa1-bc5e-e6eb261fe2a7.png" 
+              alt="Builder's OS Workspace Interface" 
+              className="w-full h-auto rounded-lg shadow-2xl border border-gray-700"
+            />
+          </div>
+        </div>
         
         <EmailForm />
         
