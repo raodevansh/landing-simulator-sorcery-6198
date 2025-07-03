@@ -56,7 +56,7 @@ const Index = () => {
         <div className={`mt-16 mb-12 text-center transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
           <div className="max-w-5xl mx-auto">
             <img 
-              src="/lovable-uploads/9120c020-d037-4fa1-bc5e-e6eb261fe2a7.png" 
+              src="/lovable-uploads/5a2edd1b-8796-4d19-9211-afaf4abc9d69.png" 
               alt="Builder's OS Workspace Interface" 
               className="w-full h-auto rounded-lg shadow-2xl border border-gray-700"
             />
