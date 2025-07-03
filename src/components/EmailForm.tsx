@@ -2,13 +2,11 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
-import { useNavigate } from 'react-router-dom';
 
 const EmailForm = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
-  const navigate = useNavigate();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -23,15 +21,14 @@ const EmailForm = () => {
 
     setIsSubmitting(true);
     
-    // Simulate submission and redirect to CreateGame page
+    // Simulate submission with green success message
     setTimeout(() => {
       toast({
-        title: "Success!",
-        description: "You've been added to the waitlist.",
+        title: "You're on the list. We'll reach out soon. Stand by for next-gen building tools.",
+        className: "bg-green-600 border-green-600 text-white",
       });
       setEmail('');
       setIsSubmitting(false);
-      navigate('/create-game');
     }, 1500);
   };
 
