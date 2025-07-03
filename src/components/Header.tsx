@@ -10,8 +10,16 @@ const Header = () => {
 
   return (
     <header className={`py-8 transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
-      <h1 className="font-bold text-white text-3xl md:text-4xl tracking-widest text-center" style={{ fontFamily: 'Arial', letterSpacing: '0.2em' }}>
-        ENGINE ARCADE
+      <h1 className="font-bold text-7xl tracking-wide text-center" style={{ 
+        fontFamily: 'Inter, sans-serif', 
+        fontSize: '75px',
+        fontWeight: 'bold',
+        background: 'linear-gradient(to right, #FFFFFF, #4B3B89)',
+        WebkitBackgroundClip: 'text',
+        WebkitTextFillColor: 'transparent',
+        backgroundClip: 'text'
+      }}>
+        Builder's OS
       </h1>
     </header>
   );

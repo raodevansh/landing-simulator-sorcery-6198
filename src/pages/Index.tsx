@@ -23,16 +23,24 @@ const Index = () => {
       <div className="flex-1 container mx-auto px-4 py-8 max-w-6xl">
         <Header />
         
-        <div className={`mt-16 mb-12 text-center transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            <span className="gradient-text">Create Games With Just a Prompt</span>
-          </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Type a prompt, get a playable game instantly. No coding required.
+        <div className={`mt-8 mb-12 text-center transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+          <p className="text-lg text-gray-300 max-w-4xl mx-auto leading-relaxed">
+            Builders creative OS for founders and builders. Turn raw ideas into MVP, automate the boring, streamline the building, and stay in flow from first thought to final product with our unified workspace and also 100+ AI agent integrated library,
           </p>
         </div>
         
         <Terminal />
+        
+        {/* Hero Image Section */}
+        <div className={`mt-16 mb-12 text-center transition-opacity duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}>
+          <div className="max-w-5xl mx-auto">
+            <img 
+              src="/lovable-uploads/d89eacc9-647c-4934-8cbe-5dc3e510a06d.png" 
+              alt="Builder's OS Product Interface" 
+              className="w-full h-auto rounded-lg shadow-2xl border border-gray-700"
+            />
+          </div>
+        </div>
         
         <EmailForm />
         
@@ -40,28 +48,28 @@ const Index = () => {
           <FeatureCard 
             icon={<MessageSquare size={28} />}
             title="Chat to Create"
-            description="Simply describe your game idea in natural language and watch it come to life"
+            description="Simply describe your idea in natural language and watch it come to life"
             delay="delay-100"
           />
           
           <FeatureCard 
             icon={<Code size={28} />}
             title="No Coding Required"
-            description="Create complex games without writing a single line of code"
+            description="Create complex solutions without writing a single line of code"
             delay="delay-300"
           />
           
           <FeatureCard 
             icon={<Play size={28} />}
-            title="Instantly Playable"
-            description="Get a working game in seconds that you can play and share immediately"
+            title="Instantly Buildable"
+            description="Get working prototypes in seconds that you can iterate and share immediately"
             delay="delay-500"
           />
         </div>
       </div>
       
       <footer className="py-6 border-t border-gray-800 text-center text-sm text-gray-500">
-        <p>© 2025 Engine Arcade. All rights reserved.</p>
+        <p>© 2025 Builder's OS. All rights reserved.</p>
       </footer>
     </div>
   );
