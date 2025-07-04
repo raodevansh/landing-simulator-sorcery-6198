@@ -2,13 +2,14 @@
 import { useState } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const EmailForm = () => {
   const [email, setEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email.trim()) {
@@ -21,15 +22,32 @@ const EmailForm = () => {
 
     setIsSubmitting(true);
     
-    // Simulate submission with green success message
-    setTimeout(() => {
+    try {
+      const { error } = await supabase
+        .from('email;')
+        .insert({
+          email: email.trim(),
+          "date and time": new Date().toISOString(),
+        });
+
+      if (error) {
+        throw error;
+      }
+
       toast({
         title: "You're on the list. We'll reach out soon. Stand by for next-gen building tools.",
         className: "bg-green-600 border-green-600 text-white",
       });
       setEmail('');
+    } catch (error) {
+      console.error('Error saving email:', error);
+      toast({
+        title: "Something went wrong. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
